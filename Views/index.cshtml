@@ -1,37 +1,49 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+  <h1>Rock, Paper, Scissors</h1>
+</div>
 <form class="" action="/" method="post">
-  <h2>Player 1</h2>
-  <div class="radio">
-    <label>Rock
-      <input type="radio" name="player-one" value="Rock">
-    </label>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+      <h2>Player 1</h2>
+      <div class="radio">
+        <input type="radio" name="player-one" value="Rock">
+        <label>Rock</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="player-one" value="Paper">
+        <label>Paper</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="player-one" value="Scissors">
+        <label>Scissors</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>Player 2</h2>
+      <div class="radio">
+        <input type="radio" name="player-two" value="Rock">
+        <label>Rock</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="player-two" value="Paper">
+        <label>Paper</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="player-two" value="Scissors">
+        <label>Scissors</label>
+      </div>
+    </div>
+    <div class="col-md-2">
+    </div>
   </div>
-  <div class="radio">
-    <label>Paper
-      <input type="radio" name="player-one" value="Paper">
-    </label>
-  </div>
-  <div class="radio">
-    <label>Scissors
-      <input type="radio" name="player-one" value="Scissors">
-    </label>
-  </div>
-  <h2>Player 2</h2>
-  <div class="radio">
-    <label>Rock
-      <input type="radio" name="player-two" value="Rock">
-    </label>
-  </div>
-  <div class="radio">
-    <label>Paper
-      <input type="radio" name="player-two" value="Paper">
-    </label>
-  </div>
-  <div class="radio">
-    <label>Scissors
-      <input type="radio" name="player-two" value="Scissors">
-    </label>
-  </div>
-  <button type="submit" name="button">PLAY THE FUCKIN GAME</button>
+  <br>
+  <button type="submit" name="button">Play Game!</button>
 </form>
 
 <h4>@Model</h4>
