@@ -36,10 +36,22 @@ namespace HandProject.Objects
       string player2Input = player2;
       if (player1Input == player2Input)
       {
+        Console.WriteLine("Tie!");
+        return true;
+      }
+      else if (player1Input == "Scissors")
+      {
+        Console.WriteLine("Player One loses");
+        return false;
+      }
+      else if (player1Input == "Paper")
+      {
+        Console.WriteLine("Player One Wins!");
         return true;
       }
       else
       {
+        Console.WriteLine("Something went wrong.");
         return false;
       }
     }
