@@ -30,11 +30,18 @@ namespace HandProject.Objects
     {
       _player2 = newPlayer2;
     }
-    public static string PlayGame(string player1)
+    public static bool PlayGame(string player1, string player2)
     {
       string player1Input = player1;
-      Console.WriteLine(player1Input);
-      return player1Input;
+      string player2Input = player2;
+      if (player1Input == player2Input)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }

@@ -1,8 +1,8 @@
 Specs:
 
-1. Player 1 can select from Rock, Paper, or Scissors using buttons
+1. Player 1 can gather input.
 
-2. Site automatically generates one option of the three
+2. Site will test for tie condition between players.
 
 3. Site recognizes win/loss for Player 1
 

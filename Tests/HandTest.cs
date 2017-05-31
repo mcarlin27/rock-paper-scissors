@@ -10,13 +10,28 @@ namespace HandProject.Objects
     {
       //Arrange
       string player1 = "Rock";
-      Hand newHand = new Hand(player1);
+      Hand player1Hand = new Hand(player1);
 
       //Act
-      string result = newHand.GetPlayer1();
+      string result = player1Hand.GetPlayer1();
 
       //Assert
-      Assert.Equal(player1, result);
+      Assert.Equal(true, Hand.PlayGame(result, "Rock"));
+    }
+
+    [Fact]
+    public void PlayGame_TestForTie_true()
+    {
+      //Arrange
+      string player1 = "Rock";
+      Hand player1Hand = new Hand(player1);
+
+      //Act
+      string resultPlayer1 = player1Hand.GetPlayer1();
+      string resultPlayer2 = player1Hand.GetPlayer2();
+
+      //Assert
+      Assert.Equal(true, Hand.PlayGame(resultPlayer1, resultPlayer2));
     }
   }
 }
