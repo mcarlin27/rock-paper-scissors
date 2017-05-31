@@ -8,10 +8,10 @@ namespace HandProject.Objects
     private string _player1;
     private string _player2;
 
-    public Hand (string input)
+    public Hand (string player1Input, string player2Input)
     {
-      _player1 = input;
-      _player2 = "Rock";
+      _player1 = player1Input;
+      _player2 = player2Input;
     }
 
     public string GetPlayer1()
@@ -34,24 +34,25 @@ namespace HandProject.Objects
     {
       string player1Input = player1;
       string player2Input = player2;
+
       if (player1Input == player2Input)
       {
         Console.WriteLine("Tie!");
         return true;
       }
-      else if (player1Input == "Scissors")
+      else if (player1Input == "Scissors" && player2Input != "Rock")
       {
-        Console.WriteLine("Player One loses");
-        return false;
+        Console.WriteLine("Player One Wins!");
+        return true;
       }
-      else if (player1Input == "Paper")
+      else if (player1Input == "Paper" && player2Input != "Scissors")
       {
         Console.WriteLine("Player One Wins!");
         return true;
       }
       else
       {
-        Console.WriteLine("Something went wrong.");
+        Console.WriteLine("Player Two Wins!");
         return false;
       }
     }
