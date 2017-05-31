@@ -11,6 +11,14 @@ namespace HandProject
       Get["/"] = _ => {
         return View["index.cshtml"];
       };
+
+      Post["/"] = _ => {
+        Hand player1 = new Hand(Request.Form["player-one"], Request.Form["player-two"]);
+        string playerOneInput = player1.GetPlayer1();
+        string playerTwoInput = player1.GetPlayer2();
+        string output = Hand.PlayGame(playerOneInput, playerTwoInput);
+        return View["index.cshtml", output];
+      };
     }
   }
 }

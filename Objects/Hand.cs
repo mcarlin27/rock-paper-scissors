@@ -30,7 +30,7 @@ namespace HandProject.Objects
     {
       _player2 = newPlayer2;
     }
-    public static bool PlayGame(string player1, string player2)
+    public static string PlayGame(string player1, string player2)
     {
       string player1Input = player1;
       string player2Input = player2;
@@ -38,22 +38,27 @@ namespace HandProject.Objects
       if (player1Input == player2Input)
       {
         Console.WriteLine("Tie!");
-        return true;
+        return "Tie!"; //true
       }
       else if (player1Input == "Scissors" && player2Input != "Rock")
       {
         Console.WriteLine("Player One Wins!");
-        return true;
+        return "Player One Wins!"; //true
       }
       else if (player1Input == "Paper" && player2Input != "Scissors")
       {
         Console.WriteLine("Player One Wins!");
-        return true;
+        return "Player One Wins!"; //true
+      }
+      else if (player1Input == "Rock" && player2Input != "Paper")
+      {
+        Console.WriteLine("Player One Wins!");
+        return "Player One Wins!"; //true
       }
       else
       {
         Console.WriteLine("Player Two Wins!");
-        return false;
+        return "Player Two Wins!"; //false
       }
     }
   }

@@ -16,7 +16,7 @@ namespace HandProject.Objects
       string result = player1Hand.GetPlayer1();
 
       //Assert
-      Assert.Equal(true, Hand.PlayGame(result, "Rock"));
+      Assert.Equal("Tie", Hand.PlayGame(result, "Rock"));
       // WL should return "Tie"
     }
 
@@ -32,7 +32,7 @@ namespace HandProject.Objects
       string resultPlayer2 = player1Hand.GetPlayer2();
 
       //Assert
-      Assert.Equal(true, Hand.PlayGame(resultPlayer1, resultPlayer2));
+      Assert.Equal("Tie", Hand.PlayGame(resultPlayer1, resultPlayer2));
       // WL should return "Tie"
     }
 
@@ -48,7 +48,7 @@ namespace HandProject.Objects
       string resultPlayer2 = player1Hand.GetPlayer2();
 
       //Assert
-      Assert.Equal(false, Hand.PlayGame(resultPlayer1, resultPlayer2));
+      Assert.Equal("Player Two Wins!", Hand.PlayGame(resultPlayer1, resultPlayer2));
       // Wl should return "Player Two Wins!"
     }
 
@@ -64,7 +64,7 @@ namespace HandProject.Objects
       string resultPlayer2 = player1Hand.GetPlayer2();
 
       //Assert
-      Assert.Equal(true, Hand.PlayGame(resultPlayer1, resultPlayer2));
+      Assert.Equal("Player One Wins!", Hand.PlayGame(resultPlayer1, resultPlayer2));
       // WL should return "Player One Wins!"
     }
 
@@ -80,7 +80,7 @@ namespace HandProject.Objects
       string resultPlayer2 = player1Hand.GetPlayer2();
 
       //Assert
-      Assert.Equal(true, Hand.PlayGame(resultPlayer1, resultPlayer2));
+      Assert.Equal("Tie", Hand.PlayGame(resultPlayer1, resultPlayer2));
       // WL should return "Tie"
     }
 
@@ -97,7 +97,7 @@ namespace HandProject.Objects
       string resultPlayer2 = player1Hand.GetPlayer2();
 
       //Assert
-      Assert.Equal(false, Hand.PlayGame(resultPlayer1, resultPlayer2));
+      Assert.Equal("Player Two Wins!", Hand.PlayGame(resultPlayer1, resultPlayer2));
       // WL should return "Player Two Wins!"
     }
   }
